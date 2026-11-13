@@ -127,12 +127,18 @@ Matices que debes aplicar con criterio:
 
 ### Paso 6: Generar los entregables
 
-Lee `plantilla-informe.md` y genera, salvo que el usuario pida otra cosa:
+Lee `plantilla-informe.md` y redacta primero, en cada idioma, un archivo
+`textos_es.json` / `textos_en.json` con la conclusión general, los 5
+hallazgos, la interpretación de cada indicador, las recomendaciones y los
+títulos de las gráficas. El formato está en el encabezado de
+`generar_excel.py`. Los scripts no redactan: solo ubican tus textos.
+
+Luego genera, salvo que el usuario pida otra cosa:
 
 | Archivo | Comando |
 |---|---|
-| `Analisis_EEFF_<empresa>_<año>_ES.xlsx` | `generar_excel.py --idioma es` |
-| `Financial_Analysis_<company>_<year>_EN.xlsx` | `generar_excel.py --idioma en` |
+| `Analisis_EEFF_<empresa>_<año>_ES.xlsx` | `generar_excel.py datos_homologados.json resultados_indicadores.json --idioma es --textos textos_es.json` |
+| `Financial_Analysis_<company>_<year>_EN.xlsx` | `generar_excel.py datos_homologados.json resultados_indicadores.json --idioma en --textos textos_en.json` |
 | `Informe_EEFF_<empresa>_<año>_ES.pdf` | `generar_pdf.py --idioma es` |
 | `Financial_Report_<company>_<year>_EN.pdf` | `generar_pdf.py --idioma en` |
 

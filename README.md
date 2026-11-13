@@ -1,9 +1,9 @@
 # 📊 Analisis-EEFF
 
 > 🚧 **En construcción.** La skill todavía no funciona completa: faltan los
-> rangos sectoriales y los scripts que generan el Excel y el PDF. Ya están
-> disponibles `SKILL.md`, las cuatro referencias y `calcular_indicadores.py`
-> (con pruebas automáticas).
+> rangos sectoriales y el script que genera el PDF. Ya están disponibles
+> `SKILL.md`, las cuatro referencias, `calcular_indicadores.py` y
+> `generar_excel.py` (con pruebas automáticas).
 > Puedes seguir el avance en la
 > sección **Hoja de ruta**, al final de este documento.
 
