@@ -2,7 +2,8 @@
 
 > 🚧 **En construcción.** La skill todavía no funciona: faltan los scripts,
 > los rangos sectoriales y parte de las referencias. Ya están disponibles
-> `SKILL.md` y `referencias/indicadores.md`. Puedes seguir el avance en la
+> `SKILL.md`, `referencias/indicadores.md` y `referencias/homologacion-puc.md`.
+> Puedes seguir el avance en la
 > sección **Hoja de ruta**, al final de este documento.
 
 Skill para Claude que analiza el Estado de Situación Financiera (ESF) y el
