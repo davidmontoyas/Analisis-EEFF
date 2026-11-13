@@ -2,7 +2,8 @@
 
 > 🚧 **En construcción.** La skill todavía no funciona: faltan los scripts,
 > los rangos sectoriales y parte de las referencias. Ya están disponibles
-> `SKILL.md`, `referencias/indicadores.md` y `referencias/homologacion-puc.md`.
+> `SKILL.md`, `referencias/indicadores.md`, `referencias/homologacion-puc.md`
+> y `referencias/glosario-es-en.md`.
 > Puedes seguir el avance en la
 > sección **Hoja de ruta**, al final de este documento.
 
