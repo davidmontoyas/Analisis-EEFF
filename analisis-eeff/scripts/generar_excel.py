@@ -21,6 +21,7 @@ Entradas:
           "recomendaciones": ["…"],
           "titulos_graficas": {"liquidez": "…", "endeudamiento": "…", "rentabilidad": "…",
                                "actividad": "…", "activo": "…", "financiacion": "…"},
+          "advertencias": ["…"],   # opcional: traducidas si el idioma es "en"
           "preparado_por": "…"
         }
 
@@ -817,7 +818,7 @@ class Libro:
         ws["A1"], ws["A1"].font = t["notas"], F_TITULO
         fila = 3
         bloques = [
-            (t["advertencias"], self.r.get("advertencias", [])),
+            (t["advertencias"], self.tx.get("advertencias", self.r.get("advertencias", []))),
             (t["metodologia"], [m.format(dias=self.periodos[-1].get("dias_periodo") or 360) for m in t["met"]]),
         ]
         for titulo, lineas in bloques:

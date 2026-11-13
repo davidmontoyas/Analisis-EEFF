@@ -129,9 +129,12 @@ Matices que debes aplicar con criterio:
 
 Lee `plantilla-informe.md` y redacta primero, en cada idioma, un archivo
 `textos_es.json` / `textos_en.json` con la conclusión general, los 5
-hallazgos, la interpretación de cada indicador, las recomendaciones y los
-títulos de las gráficas. El formato está en el encabezado de
-`generar_excel.py`. Los scripts no redactan: solo ubican tus textos.
+hallazgos, la interpretación de cada indicador, un párrafo por grupo, el
+párrafo de estructura financiera, las alertas, las recomendaciones y los
+títulos de las gráficas. En `textos_en.json` incluye también `advertencias`,
+traducidas desde `resultados_indicadores.json`. El formato completo está en
+el encabezado de `generar_pdf.py`. Los scripts no redactan: solo ubican tus
+textos.
 
 Luego genera, salvo que el usuario pida otra cosa:
 
@@ -139,8 +142,11 @@ Luego genera, salvo que el usuario pida otra cosa:
 |---|---|
 | `Analisis_EEFF_<empresa>_<año>_ES.xlsx` | `generar_excel.py datos_homologados.json resultados_indicadores.json --idioma es --textos textos_es.json` |
 | `Financial_Analysis_<company>_<year>_EN.xlsx` | `generar_excel.py datos_homologados.json resultados_indicadores.json --idioma en --textos textos_en.json` |
-| `Informe_EEFF_<empresa>_<año>_ES.pdf` | `generar_pdf.py --idioma es` |
-| `Financial_Report_<company>_<year>_EN.pdf` | `generar_pdf.py --idioma en` |
+| `Informe_EEFF_<empresa>_<año>_ES.pdf` | `generar_pdf.py datos_homologados.json resultados_indicadores.json --idioma es --textos textos_es.json` |
+| `Financial_Report_<company>_<year>_EN.pdf` | `generar_pdf.py datos_homologados.json resultados_indicadores.json --idioma en --textos textos_en.json` |
+
+`generar_pdf.py` informa cuántas páginas tiene el PDF. Si pasa de 4 aun
+después de sus recortes automáticos, acorta tus párrafos y vuelve a generarlo.
 
 Para el inglés:
 
