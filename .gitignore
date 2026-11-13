@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+
+# Resultados generados: nunca subir datos de clientes
+resultados_indicadores.json
+datos_homologados.json
+*.xlsx
+*.pdf
+!analisis-eeff/ejemplos/*.xlsx

@@ -26,7 +26,11 @@ Lee cada uno solo cuando llegues al paso que lo necesita:
 
 Scripts en `scripts/` (ejecútalos en lugar de calcular a mano):
 
-- `calcular_indicadores.py`: recibe el JSON homologado y devuelve indicadores y comparación sectorial.
+- `calcular_indicadores.py datos_homologados.json`: valida los cuadres y
+  genera `resultados_indicadores.json` con el análisis vertical y horizontal,
+  los indicadores, la comparación sectorial y las lecturas combinadas. Si
+  termina con código 2, la ecuación contable no cuadra: no uses `--forzar`
+  sin explicárselo al usuario.
 - `generar_excel.py --idioma es|en`: arma el libro de Excel con fórmulas vivas.
 - `generar_pdf.py --idioma es|en`: arma el informe ejecutivo.
 

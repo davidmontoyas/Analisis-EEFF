@@ -1,9 +1,9 @@
 # 📊 Analisis-EEFF
 
-> 🚧 **En construcción.** La skill todavía no funciona: faltan los scripts y
-> los rangos sectoriales. Ya están disponibles `SKILL.md` y las cuatro
-> referencias (`indicadores.md`, `homologacion-puc.md`, `glosario-es-en.md`
-> y `plantilla-informe.md`).
+> 🚧 **En construcción.** La skill todavía no funciona completa: faltan los
+> rangos sectoriales y los scripts que generan el Excel y el PDF. Ya están
+> disponibles `SKILL.md`, las cuatro referencias y `calcular_indicadores.py`
+> (con pruebas automáticas).
 > Puedes seguir el avance en la
 > sección **Hoja de ruta**, al final de este documento.
 
@@ -112,6 +112,12 @@ cp -r Analisis-EEFF/analisis-eeff ~/.claude/skills/
 
 En Windows, la carpeta de destino es `%USERPROFILE%\.claude\skills\`.
 
+Los scripts necesitan **Python 3.10 o superior** y estas librerías:
+
+```bash
+pip install -r Analisis-EEFF/requirements.txt
+```
+
 ### En Claude.ai / Claude Desktop
 1. Descarga la carpeta `analisis-eeff` como `.zip`.
 2. Ve a **Configuración → Capacidades → Skills** y súbela.
@@ -134,6 +140,8 @@ Analisis-EEFF/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
+├── requirements.txt                # Librerías de Python para los scripts
+├── tests/                          # Pruebas automáticas de los scripts
 └── analisis-eeff/                  # ← la skill (esta es la carpeta que se instala)
     ├── SKILL.md                    # Instrucciones principales para Claude
     ├── referencias/
@@ -149,7 +157,7 @@ Analisis-EEFF/
     │   ├── generar_pdf.py
     │   └── actualizar_rangos.py    # Recalcula los rangos con datos nuevos de Supersociedades
     └── ejemplos/
-        └── empresa-ejemplo.xlsx    # Datos ficticios para probar
+        └── empresa-ejemplo.json    # Datos ficticios ya homologados, para probar
 ```
 
 ---
@@ -196,6 +204,22 @@ un sector en el tiempo.
 - [ ] **v1.1:** indicadores de valor (EBITDA, margen EBITDA, productividad del
       KTNO, palanca de crecimiento, sistema DuPont)
 - [ ] **v1.2:** comparación entre varias empresas del mismo grupo o cartera de clientes
+
+---
+
+## 🧪 Pruebas
+
+Desde la raíz del repositorio:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Para ver el cálculo con la empresa de ejemplo:
+
+```bash
+python analisis-eeff/scripts/calcular_indicadores.py analisis-eeff/ejemplos/empresa-ejemplo.json
+```
 
 ---
 

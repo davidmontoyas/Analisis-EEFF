@@ -1,0 +1,6 @@
+# calcular_indicadores.py solo usa la biblioteca estándar.
+# Las siguientes librerías las usan los demás scripts.
+openpyxl>=3.1      # generar_excel.py
+reportlab>=4.0     # generar_pdf.py
+matplotlib>=3.8    # gráficas del PDF
+pandas>=2.0        # actualizar_rangos.py
