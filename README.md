@@ -1,9 +1,9 @@
 # 📊 Analisis-EEFF
 
-> 🚧 **En construcción.** La skill todavía no funciona: faltan los scripts,
-> los rangos sectoriales y parte de las referencias. Ya están disponibles
-> `SKILL.md`, `referencias/indicadores.md`, `referencias/homologacion-puc.md`
-> y `referencias/glosario-es-en.md`.
+> 🚧 **En construcción.** La skill todavía no funciona: faltan los scripts y
+> los rangos sectoriales. Ya están disponibles `SKILL.md` y las cuatro
+> referencias (`indicadores.md`, `homologacion-puc.md`, `glosario-es-en.md`
+> y `plantilla-informe.md`).
 > Puedes seguir el avance en la
 > sección **Hoja de ruta**, al final de este documento.
 
